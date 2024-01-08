@@ -9,6 +9,7 @@ from datetime import date
 from splinter import Browser
 from bs4 import BeautifulSoup as soup
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import Select
 
 
 class JobBoard:
@@ -30,6 +31,9 @@ class JobBoard:
     def __scroll__(self, csSelect, start, end):
         self.browser.execute_script(
         f"document.querySelector('{csSelect}').scroll({start}, {end})") 
+        
+    def __pageScroll__(self):
+        self.browser.execute_script("window.scrollTo(0, document.body.scrollHeight)")
         
     # Select the correct Date Bin For Filtering
     def __minDateBin__(self, date_bins):
