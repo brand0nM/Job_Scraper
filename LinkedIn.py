@@ -54,8 +54,8 @@ class LinkedIn(JobBoard):
         self.__click__(nav["LinkedIn"]["radius2"])
         time.sleep(random()*2)
         gui.click(
-            x=550, 
-            y=600,
+            x=0, 
+            y=0,
             clicks=1, 
             interval=2, 
             button='left')

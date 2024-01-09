@@ -9,7 +9,7 @@ from datetime import date
 
 
 def __main__(days_ago, location):
-	todays_date = str(date.today())
+	todays_date = str(date.today()) if (location.lower() != "remote") else "remote_"+str(date.today())
 
 	def clean(df):
 		return noSeniors(df\
@@ -59,3 +59,4 @@ def __main__(days_ago, location):
 
 
 __main__(0, "Centennial, Colorado")
+__main__(0, "remote")
