@@ -9,13 +9,13 @@ class Monster(JobBoard):
         def clicker():
             print("Trying Filter Click...")
             time.sleep(random()*3+2); self.__click__(nav["Monster"]["click2"])
-            if self.browser.is_element_visible_by_xpath(nav["Monster"]["click3"]):
+            if self.browser.is_element_present_by_xpath(nav["Monster"]["click3"]):
                 print("Filter Clicked"); return
             clicker()
             
         # Scroll and Collect All Available Jobs
         def addJobs(start, available_jobs, date_range):
-            time.sleep(4)
+            time.sleep(random()*3)
             # Load all Jobs
             def loadMore(acc):
                 # Are There Any Results?
@@ -25,9 +25,9 @@ class Monster(JobBoard):
                 # Any More Results?
                 if condition:
                     # Scroll Side-Bar to Bottom then up a Little
-                    self.__scroll__('#card-scroll-container', acc, (acc + 300)); time.sleep(1.5)
+                    self.__scroll__('#card-scroll-container', acc, (acc + 300)); time.sleep(random()*1.5)
                     self.__scroll__('#card-scroll-container', (acc + 300), (acc + 290))
-                    time.sleep(.7); loadMore(acc + 1000)              
+                    time.sleep(random()*.7); loadMore(acc + 1000)              
             loadMore(0); return parseJob(available_jobs, date_range)
         # Parse all Jobs on the page
         def parseJob(available_jobs, date_range):

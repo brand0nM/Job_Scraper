@@ -40,7 +40,8 @@ nav = {
     "ZipRecruiter": {
         "jobfill": "/html/body/div[1]/section[2]/form/div[1]/div/div/div/input",
         "search": "/html/body/div[1]/section[2]/form/button",
-        "radius1": "/html/body/div[5]/div[3]/div[4]/section/div/section/div/div/div/ul/li[3]/div/span/button",
+        "radius1": "/html/body/header/div[2]/form/ul/li[2]/button",
+        "radius2": "/html/body/header/div[2]/form/ul/li[2]/div/div[2]/button[6]",
         "click1": "/html/body/header/div[2]/form/ul/li[3]/button",
         "click2": {
             "within_1_day":"/html/body/header/div[2]/form/ul/li[3]/div/div[2]/button[5]",
