@@ -19,6 +19,14 @@ class JobBoard:
         self.days_ago = DaysAgo
         self.browser = Browser('chrome')
 
+    def __clear__(self, xpath):
+        if self.browser.find_by_xpath(xpath).value!="":
+        	try:
+        	    self.__fill__(xpath, Keys.BACKSPACE)
+        	    time.sleep(random()/4)
+        	    self.__clear__(xpath)
+        	except:
+        	    print("cant delete")
     # Click a browsers tag based on the xpath
     def __click__(self, xpath):
         self.browser.find_by_xpath(xpath).click()    

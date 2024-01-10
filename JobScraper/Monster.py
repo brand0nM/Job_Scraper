@@ -52,7 +52,7 @@ class Monster(JobBoard):
         self.browser.find_by_css("#horizontal-input-two-undefined").fill(self.job_location)
         # Click on Search
         self.__click__(nav["Monster"]["click1"])
-        
+         
         
         ## Filter Results
         clicker()

@@ -39,6 +39,7 @@ nav = {
         "click3":"/html/body/div[4]/div[3]/div[4]/section/div/section/div/div/div/ul/li[4]/div/div/div/div[1]/div/form/fieldset/div[2]/button[2]"},
     "ZipRecruiter": {
         "jobfill": "/html/body/div[1]/section[2]/form/div[1]/div/div/div/input",
+        "locfill": "/html/body/div[1]/section[2]/form/div[2]/div/div/div/input",
         "search": "/html/body/div[1]/section[2]/form/button",
         "radius1": "/html/body/header/div[2]/form/ul/li[2]/button",
         "radius2": "/html/body/header/div[2]/form/ul/li[2]/div/div[2]/button[6]",

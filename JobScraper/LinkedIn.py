@@ -34,14 +34,18 @@ class LinkedIn(JobBoard):
         self.__fill__(nav["LinkedIn"]["passfill"], config.password)
         self.__click__(nav["LinkedIn"]["clickloggin"])
         self.browser.visit("https://www.linkedin.com/jobs/?") 
-        self.browser.find_by_css("#jobs-search-box-keyword-id-ember26").fill(self.job_title)
-        self.browser.find_by_css("#jobs-search-box-location-id-ember26").fill(self.job_location+Keys.ENTER)
+        search = self.browser.find_by_css("input")
+        search[0].fill(self.job_title)
+        search[3].fill(self.job_location+Keys.ENTER)
         
         
         ## Filter Jobs
         # Widden Search Radius
         time.sleep(random()*2+1)
-        self.__click__(nav["LinkedIn"]["radius1"])
+        try:
+            self.browser.find_by_css(".search-reusables__primary-filter")[1].find_by_css(".artdeco-pill").click()
+        except:
+            self.__click__(nav["LinkedIn"]["radius1"])	
         time.sleep(random()*2)
         touch = self.browser.find_by_id("distance-filter-bar-slider")
         gui.click(
@@ -54,8 +58,8 @@ class LinkedIn(JobBoard):
         self.__click__(nav["LinkedIn"]["radius2"])
         time.sleep(random()*2)
         gui.click(
-            x=0, 
-            y=0,
+            x=600, 
+            y=1200,
             clicks=1, 
             interval=2, 
             button='left')

@@ -1,10 +1,4 @@
-from JobBoard import *
-from Dice import Dice
-from Monster import Monster
-from Indeed import Indeed
-from LinkedIn import LinkedIn
-from ZipRecruiter import ZipRecruiter
-from Google import Google
+from JobScraper import *
 from datetime import date
 
 
@@ -13,11 +7,13 @@ def __main__(days_ago, location):
 
 	def clean(df):
 		return noSeniors(df\
-			.reset_index().drop(["index"], axis=1)\
+			.reset_index()\
 			.groupby(["job_title", "company"]).sum()\
-			.reset_index().sort_values("job_title"))
+			.reset_index().sort_values("job_title")\
+                        .drop(["index", "Unnamed: 0"], axis=1)\
+                        .sort_values("job_title"))
 
-	Dice Listings
+	# Dice Listings
 	dice_listings = pd.concat([
 		Dice("SQL Analyst", location, days_ago).available_jobs,\
 		Dice("Data Analyst", location, days_ago).available_jobs,\
