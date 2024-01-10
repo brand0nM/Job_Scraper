@@ -1,5 +1,4 @@
-from Nav import nav
-from JobBoard import *
+from .JobBoard import *
 
 class ZipRecruiter(JobBoard):
     # Want to initialize in parrallel 

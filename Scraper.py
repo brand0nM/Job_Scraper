@@ -6,19 +6,18 @@ def __main__(days_ago, location):
 	todays_date = str(date.today()) if (location.lower() != "remote") else "remote_"+str(date.today())
 
 	def clean(df):
-		return noSeniors(df\
-			.reset_index()\
-			.groupby(["job_title", "company"]).sum()\
-			.reset_index().sort_values("job_title")\
-                        .drop(["index", "Unnamed: 0"], axis=1)\
-                        .sort_values("job_title"))
+		grouped = df\
+                    .groupby(["job_title", "company"]).sum()\
+                    .reset_index()\
+                    .sort_values("job_title"); return noSeniors(grouped)
 
 	# Dice Listings
 	dice_listings = pd.concat([
 		Dice("SQL Analyst", location, days_ago).available_jobs,\
 		Dice("Data Analyst", location, days_ago).available_jobs,\
 		Dice("Data Scientist", location, days_ago).available_jobs,\
-		Dice("Data Engineer", location, days_ago).available_jobs])
+		Dice("Data Engineer", location, days_ago).available_jobs],
+                ignore_index = True)
 	clean(dice_listings).to_csv("Listings/Dice/"+todays_date+".csv")
 
 	# Indeed Listings
@@ -26,7 +25,8 @@ def __main__(days_ago, location):
 		Indeed("SQL Analyst", location, days_ago).available_jobs,\
 		Indeed("Data Analyst", location, days_ago).available_jobs,\
 		Indeed("Data Scientist", location, days_ago).available_jobs,\
-		Indeed("Data Engineer", location, days_ago).available_jobs])
+		Indeed("Data Engineer", location, days_ago).available_jobs],
+                ignore_index = True)
 	clean(indeed_listings).to_csv("Listings/Indeed/"+todays_date+".csv")
 
 	# LinkedIn Listings
@@ -34,7 +34,8 @@ def __main__(days_ago, location):
 		LinkedIn("SQL Analyst", location, days_ago).available_jobs,\
 		LinkedIn("Data Analyst", location, days_ago).available_jobs,\
 		LinkedIn("Data Scientist", location, days_ago).available_jobs,\
-		LinkedIn("Data Engineer", location, days_ago).available_jobs])
+		LinkedIn("Data Engineer", location, days_ago).available_jobs],
+                ignore_index = True)
 	clean(linkedin_jobs).to_csv("Listings/LinkedIn/"+todays_date+".csv")
 
 	# Zip Recruiter Listings
@@ -42,7 +43,8 @@ def __main__(days_ago, location):
 		ZipRecruiter("SQL Analyst", location, days_ago).available_jobs,\
 		ZipRecruiter("Data Analyst", location, days_ago).available_jobs,\
 		ZipRecruiter("Data Scientist", location, days_ago).available_jobs,\
-		ZipRecruiter("Data Engineer", location, days_ago).available_jobs])
+		ZipRecruiter("Data Engineer", location, days_ago).available_jobs],
+                ignore_index = True)
 	clean(zip_listings).to_csv("Listings/ZipRecruiter/"+todays_date+".csv")
 
 	# Monster Listings
@@ -50,7 +52,8 @@ def __main__(days_ago, location):
 		Monster("SQL Analyst", location, days_ago).available_jobs,\
 		Monster("Data Analyst", location, days_ago).available_jobs,\
 		Monster("Data Scientist", location, days_ago).available_jobs,\
-		Monster("Data Engineer", location, days_ago).available_jobs])
+		Monster("Data Engineer", location, days_ago).available_jobs],
+                ignore_index = True)
 	clean(monster_listings).to_csv("Listings/Monster/"+todays_date+".csv")
 
 

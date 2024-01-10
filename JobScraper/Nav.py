@@ -5,7 +5,7 @@ nav = {
         "search": "/html/body/dhi-js-dice-client/div/dhi-search-page-container/dhi-search-page/div/div/dhi-search-bar-widget/js-search-input/div/form/div/div[3]/button",
         "location": {
             "remote": "/html/body/dhi-js-dice-client/div/dhi-search-page-container/dhi-search-page/div/dhi-search-page-results/div/div[3]/div/dhi-filters-widget/div/section[2]/dhi-accordion[1]/div[2]/div/js-remote-options-filter/div/ul[1]/li[1]/span/button",
-            "in-person": "/html/body/dhi-js-dice-client/div/dhi-search-page-container/dhi-search-page/div/dhi-search-page-results/div/div[3]/div/dhi-filters-widget/div/section[2]/dhi-accordion[1]/div[2]/div/js-remote-options-filter/div/ul[2]/li/span/button"},
+            "in-person": "/html/body/dhi-js-dice-client/div/dhi-search-page-container/dhi-search-page/div/dhi-search-page-results/div/div[3]/div/dhi-filters-widget/div/section[2]/dhi-accordion[1]/div[2]/div/js-remote-options-filter/div/ul[1]/li[2]/span/button"},
         "click3": {
             "any_date": "/html/body/div[3]/div[4]/div[2]/div/dhi-job-search-bar/div/div/js-search-input/div/form/div/div[3]/button",
             "last_day": "/html/body/dhi-js-dice-client/div/dhi-search-page-container/dhi-search-page/div/dhi-search-page-results/div/div[3]/div/dhi-filters-widget/div/section[2]/dhi-accordion[2]/div[2]/div/js-single-select-filter/div/div/button[2]",

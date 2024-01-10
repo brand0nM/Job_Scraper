@@ -1,5 +1,4 @@
-from Nav import nav
-from JobBoard import *
+from .JobBoard import *
 
 class Monster(JobBoard):
     def __init__(self, JobTitle, JobLocation, DaysAgo):

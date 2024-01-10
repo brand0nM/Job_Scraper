@@ -1,6 +1,4 @@
-from Nav import nav
-from JobBoard import *
-
+from .JobBoard import *
 
 class Google(JobBoard):
     def __init__(self, JobTitle, JobLocation, DaysAgo):

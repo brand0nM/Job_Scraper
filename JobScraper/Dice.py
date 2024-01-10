@@ -1,5 +1,4 @@
-from Nav import nav
-from JobBoard import *
+from .JobBoard import *
 
 class Dice(JobBoard):
     def __init__(self, JobTitle, JobLocation, DaysAgo):

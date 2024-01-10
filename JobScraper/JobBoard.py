@@ -1,8 +1,9 @@
 import math
 import time
-import config
 import numpy as np
 import pandas as pd
+from .Nav import nav
+from .Config import *
 import pyautogui as gui
 from random import random
 from datetime import date

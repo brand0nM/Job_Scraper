@@ -1,5 +1,4 @@
-from Nav import nav
-from JobBoard import *
+from .JobBoard import *
 
 class Indeed(JobBoard):
     # Select the correct Date Bin For Filtering

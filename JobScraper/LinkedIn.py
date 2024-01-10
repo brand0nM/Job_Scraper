@@ -1,5 +1,4 @@
-from Nav import nav
-from JobBoard import *
+from .JobBoard import *
 
 class LinkedIn(JobBoard):
     def __init__(self, JobTitle,  JobLocation, DaysAgo):
@@ -30,8 +29,8 @@ class LinkedIn(JobBoard):
         # Visit Linkedin
         self.browser.visit("https://www.linkedin.com")
         # If First Time
-        self.__fill__(nav["LinkedIn"]["userfill"], config.username)
-        self.__fill__(nav["LinkedIn"]["passfill"], config.password)
+        self.__fill__(nav["LinkedIn"]["userfill"], username)
+        self.__fill__(nav["LinkedIn"]["passfill"], password)
         self.__click__(nav["LinkedIn"]["clickloggin"])
         self.browser.visit("https://www.linkedin.com/jobs/?") 
         search = self.browser.find_by_css("input")
