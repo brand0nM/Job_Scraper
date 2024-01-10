@@ -12,7 +12,7 @@ eliminating jobs outside of the search windows timeframe.
 
 Finally, Writing each dataframe to its respective subdireectory with the date and whether the search was remote.
 ## Demo
-![Demo]("https://youtu.be/aaF_v897k6c")
+[Demo]("https://youtu.be/aaF_v897k6c")
 
 ## Summary
 This package allows for easy automation of scraping job data. Using a scheduler like chron, one can set and leave this script- only considering the aggregated job's data.
