@@ -3,9 +3,17 @@ from .JobBoard import *
 class LinkedIn(JobBoard):
     def __init__(self, JobTitle,  JobLocation, DaysAgo):
         super().__init__(JobTitle, JobLocation, DaysAgo)
-        
-        
-        ## Need to add scroll function
+
+
+ #        # Scroll to bottom of component and click to final page
+ #        def loadMore(page):
+ #            try:
+ #                self.__scroll__('.jobs-search-results-list', acc, (acc + 2100)); time.sleep(random()*1.5)
+ #                addJobs()
+ #                self.browser.find_by_css('.artdeco-pagination__pages')[page].click()
+ #            except:
+ #                "On The Last Page"
+        # Parse Job and add too available jobs
         def addJobs(available_jobs):
             time.sleep(random()*2+1)
             raw = soup(self.browser.html, 'html.parser').html
@@ -54,8 +62,6 @@ class LinkedIn(JobBoard):
             interval=2, 
             button='left')
         time.sleep(random()*2)
-        self.__click__(nav["LinkedIn"]["radius2"])
-        time.sleep(random()*2)
         gui.click(
             x=600, 
             y=1200,
@@ -64,6 +70,7 @@ class LinkedIn(JobBoard):
             button='left')
         # Select Date Range
         time.sleep(random()*4+2)
+	# Want to integrating __click__ with both xpath and default gui click
         self.__click__(nav["LinkedIn"]["click1"])
         date_range = self.__minDateBin__([(1, "past_24_hours"),
                                           (7, "past_week"),

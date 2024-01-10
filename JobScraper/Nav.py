@@ -28,15 +28,14 @@ nav = {
     "LinkedIn": {
         "userfill": "/html/body/main/section[1]/div/div/form/div[1]/div[1]/div/div/input",
         "passfill": "/html/body/main/section[1]/div/div/form/div[1]/div[2]/div/div/input",
-        "radius1": "/html/body/div[4]/div[3]/div[4]/section/div/section/div/div/div/ul/li[3]/div/span/button",
-        "radius2": "/html/body/div[4]/div[3]/div[4]/section/div/section/div/div/div/ul/li[3]/div/div/div/div[1]/div/form/fieldset/div[2]/button[2]",
+        "radius1": "/html/body/div[5]/div[3]/div[4]/section/div/section/div/div/div/ul/li[3]/div/span/button",
         "clickloggin": "/html/body/main/section[1]/div/div/form/div[2]/button",
-        "click1": "/html/body/div[4]/div[3]/div[4]/section/div/section/div/div/div/ul/li[4]/div/span/button",
+        "click1": "/html/body/div[5]/div[3]/div[4]/section/div/section/div/div/div/ul/li[4]/div/span/button",
         "click2": {
-            "past_24_hours":"/html/body/div[4]/div[3]/div[4]/section/div/section/div/div/div/ul/li[4]/div/div/div/div[1]/div/form/fieldset/div[1]/ul/li[4]/label",
-            "past_week":"/html/body/div[4]/div[3]/div[4]/section/div/section/div/div/div/ul/li[4]/div/div/div/div[1]/div/form/fieldset/div[1]/ul/li[3]/label",
-               "past_month":"/html/body/div[4]/div[3]/div[4]/section/div/section/div/div/div/ul/li[4]/div/div/div/div[1]/div/form/fieldset/div[1]/ul/li[2]/label"},
-        "click3":"/html/body/div[4]/div[3]/div[4]/section/div/section/div/div/div/ul/li[4]/div/div/div/div[1]/div/form/fieldset/div[2]/button[2]"},
+            "past_24_hours":"/html/body/div[5]/div[3]/div[4]/section/div/section/div/div/div/ul/li[4]/div/div/div/div[1]/div/form/fieldset/div[1]/ul/li[4]/label",
+            "past_week":"/html/body/div[5]/div[3]/div[4]/section/div/section/div/div/div/ul/li[4]/div/div/div/div[1]/div/form/fieldset/div[1]/ul/li[3]/label",
+            "past_month":"/html/body/div[5]/div[3]/div[4]/section/div/section/div/div/div/ul/li[4]/div/div/div/div[1]/div/form/fieldset/div[1]/ul/li[2]/label"},
+        "click3":"/html/body/div[5]/div[3]/div[4]/section/div/section/div/div/div/ul/li[4]/div/div/div/div[1]/div/form/fieldset/div[2]/button[2]"},
     "ZipRecruiter": {
         "jobfill": "/html/body/div[1]/section[2]/form/div[1]/div/div/div/input",
         "locfill": "/html/body/div[1]/section[2]/form/div[2]/div/div/div/input",
