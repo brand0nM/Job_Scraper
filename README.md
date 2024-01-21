@@ -30,13 +30,16 @@ Available Methods for New Class Extensions:
 - \__minDateBin__(self, date_bins): Select the correct Date Bin For Filtering
 - \__fillSchema__(self, tag, ls, conv): For DataFrame Storage
 
-*Example*:
+*Example 1*:
 
 "Get all Data Engineer Jobs from Indeed in the last week from Centennial Colorado"
 
     python3> Indeed("Data Engineer", "Centennial Colorado", 7)
 
-An example script has also been included called `scraper.py`
+*Example 2*: 
+
+Reference `scraper.py` for a more complex query.
+
 ## Demo
 
 https://github.com/brand0nM/Job_Scraper/assets/79609464/bac82b4f-4139-471f-8979-2b288c595715
